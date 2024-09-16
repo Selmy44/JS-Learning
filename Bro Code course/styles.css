@@ -4,7 +4,48 @@ body{
     font-size: 1em;
 }
 
-/* Temperature conversion program */
+/* Decrease and Increase Button CSS codes */
+
+#countLabel{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-family: helvetica;
+}
+
+#btnContainer{
+    text-align: center;
+}
+
+.buttons{
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: white;
+    background-color: hsl(214,100%,74%);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.buttons:hover{
+    background-color: hsl(214,100%,40%);
+}
+
+/* The end of Decrease and Increase Button CSS codes */
+
+
+/* Subscribe CSS codes */
+
+#mysub1{
+    font-size: 1em;
+    background-color: lightblue;
+    /* border-color: red; */
+}
+
+/* End of Subscribe CSS codes */
+
+
+/* Temperature conversion program CSS codes */
 h1{
     color: hsl(223, 100%, 64%);
 }
@@ -33,7 +74,7 @@ label{
     font-weight: bold;
 }
 
-button{
+#toButton{
     margin-top: 15px;
     background-color: hsl(0, 100%, 60%);
     color: white;
@@ -44,7 +85,7 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+#toButton:hover{
     background-color: hsl(0, 100%, 50%);
 }
 
@@ -53,34 +94,40 @@ button:hover{
     font-weight: bold;
 }
 
+/* The End of Temperature conversion program CSS codes */
 
-#countLabel{
-    display: block;
+/* Dice Roller CSS codes */
+
+#container{
+    font-family: Arial, sans-serif;
     text-align: center;
-    font-size: 10em;
-    font-family: helvetica;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-#btnContainer{
-    text-align: center;
-}
-
-.buttons{
-    padding: 10px 20px;
-    font-size: 1.5em;
+#onButton{
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(210, 100%, 50%);
     color: white;
-    background-color: hsl(214,100%,74%);
-    border-radius: 20px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.25s;
 }
 
-.buttons:hover{
-    background-color: hsl(214,100%,40%);
+#onButton:hover{
+    background-color: hsl(210, 100%, 40%);
 }
 
-#mysub1{
-    font-size: 1em;
-    background-color: lightblue;
-    /* border-color: red; */
+#onButton:active{
+    background-color: hsl(210, 100%, 30%)
 }
+
+#toInput{
+    font-size: 2rem;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+

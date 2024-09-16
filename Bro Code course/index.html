@@ -64,9 +64,17 @@
                 <label for="toCelsius">Fahrenheit ➡ Celsius</label>
                 <br><br>
 
-                <button type="button" onclick="convert()">Submit</button>
+                <button id="toButton" type="button" onclick="convert()">Submit</button>
                 <p id="result"></p>
             </form>
+        </div><br><br><br><br>
+        <div id="container">
+            <h1>Dice Roller</h1>
+            <label># of dice:</label>
+            <input type="number" id="toInput" value="1" min="1">
+            <button id="onButton" onclick="rollDice()">Roll Dice</button>
+            <div id="diceResult"></div>
+            <div id="diceImages"></div>
         </div>
     </div>
 

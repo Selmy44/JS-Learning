@@ -187,10 +187,18 @@ let temp;
 function convert(){
 
     if(toFahrenheit.checked){
-
+        // result.textContent = 'You selected Fahrenheit'; this is to display the result message of Fahrenheit
+        temp = Number(textBox.value);
+        //calculation of Celcius to Fahrenheit
+        temp = temp * 9 / 5 + 32;
+        result.textContent = temp.toFixed(1) + '°F';  //Added (.toFixed) for additional decimal number
     }
     else if(toCelsius.checked){
-
+        // result.textContent = 'You selected Celsius'; this is to display the result message of Celsius
+        temp = Number(textBox.value);
+        //calculation of Celcius to Fahrenheit
+        temp = (temp - 32) * (5 / 9);
+        result.textContent = temp.toFixed(1) + '°C';  //Added (.toFixed) for additional decimal number
     }
     else{
         result.textContent = 'Select a unit';
