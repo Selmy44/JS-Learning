@@ -96,6 +96,7 @@ label{
 
 /* The End of Temperature conversion program CSS codes */
 
+
 /* Dice Roller CSS codes */
 
 #container{
@@ -124,10 +125,21 @@ label{
     background-color: hsl(210, 100%, 30%)
 }
 
-#toInput{
+.toInput{
     font-size: 2rem;
     width: 150px;
     text-align: center;
     font-weight: bold;
 }
+
+#diceResult{
+    margin: 25px;
+}
+
+#diceImages img{
+     width: 150px;
+     margin: 5px;
+}
+
+/* The end of Dice Roller CSS codes */
 
