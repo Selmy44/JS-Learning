@@ -227,6 +227,112 @@ function rollDice(){
     diceImages.innerHTML = images.join('');
 }    
 
+// The end of DICE ROLLER Program
 
 
- 
+//RANDOM PASSWORD GENERATOR
+
+function generatePassword(length, includeLowerCase, includeUpperCase, includeNumbers, includeSymbols){
+    
+    const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+    const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const numberChars = '0123456789';
+    const symbolChars = '!@#$%^&*()_+-=';
+
+    let allowedChars = "";
+    let password = "";
+
+    allowedChars += includeLowerCase ? lowercaseChars : "";
+
+    //format of these conditions
+
+    // if (allowedChars != lowercaseChars) {
+    //     return "";
+    // }
+
+    allowedChars += includeUpperCase ? uppercaseChars : "";
+    allowedChars += includeNumbers ? numberChars : "";
+    allowedChars += includeSymbols ? symbolChars : "";
+
+    if(length <= 0){
+        return `(password length must be at least 1)`
+    }
+    if(allowedChars.length === 0){
+        return `(At least 1 set of character needs to be selected)`;
+    }
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * allowedChars.length);
+        password += allowedChars[randomIndex];
+    }
+
+    return password;
+}
+
+const passwordLength = 12;
+const includeLowerCase = true;
+const includeUpperCase = true;
+const includeNumbers = true;
+const includeSymbols = true;
+
+const password = generatePassword(passwordLength, includeLowerCase, includeUpperCase, includeNumbers, includeSymbols);
+
+console.log(`Generated password : ${password}`);
+
+
+//The end of RANDOM PASSWORD GENERATOR
+
+//CallBaks
+
+//Callback = is a functon that is passed as an argument to another function.
+
+//           used to handle asynchronous operation:
+
+//           1. Reading a file 
+//           2. Network requests
+//           3. Interacting with databases
+
+//           "Hey, when you're done, call this next"
+
+
+//Format
+//      x and y are parameters
+//      2 and 8 are arguments
+
+function sum(x, y){
+    let add = x + y;
+    console.log(add)
+}
+sum(2, 8);
+
+
+
+//example 1
+
+function hello(CallBak){
+    console.log('hello');
+    CallBak();
+}
+
+function goodbye(){
+    console.log('goodbye');
+}
+
+hello(goodbye);
+
+//example 2
+
+total(displayConsole , 1, 2);
+
+function total(callBack, a, b){
+    let addition = a + b;
+    callBack(addition);
+}
+
+function displayConsole(addition){
+    console.log(addition);
+}
+
+// this is the output of this callBack example
+// function displayPage(addition){
+//     document.getElementById('myAddition').textContent = addition;
+// }
