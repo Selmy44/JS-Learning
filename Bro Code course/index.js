@@ -336,3 +336,5 @@ function displayConsole(addition){
 // function displayPage(addition){
 //     document.getElementById('myAddition').textContent = addition;
 // }
+
+
